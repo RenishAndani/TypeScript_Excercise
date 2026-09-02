@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Share a Place</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <h1>Share a Place</h1>
+    <p>Find a place and share its location</p>
+  </header>
+
+  <main class="container">
+
+    <section class="search-section">
+
+      <h2>Find a Place</h2>
+
+      <form id="location-form">
+
+        <div class="form-control">
+          <label for="address">Address</label>
+
+          <input type="text" id="address" placeholder="Enter an address" required>
+        </div>
+
+        <button type="submit" id="search-button">
+          Search
+        </button>
+
+      </form>
+
+      <p id="status"></p>
+
+      <div id="location-results"></div>
+
+      <div id="selected-location"></div>
+
+      <button id="share-button" type="button">
+        Share Place
+      </button>
+
+    </section>
+
+    <section class="map-section">
+
+      <div id="map"></div>
+
+    </section>
+
+  </main>
+
+  <script type="module" src="./dist/app.js"></script>
+
+</body>
+
+</html>
