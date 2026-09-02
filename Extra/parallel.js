@@ -13,6 +13,17 @@ function parallelCall() {
         console.log("something went wrong");
     });
 }
+function parallelCall2() {
+    task(1, Math.floor(Math.random() * 1000)).then((result) => {
+        console.log(result);
+    });
+    task(2, Math.floor(Math.random() * 1000)).then((result) => {
+        console.log(result);
+    });
+    task(3, Math.floor(Math.random() * 1000)).then((result) => {
+        console.log(result);
+    });
+}
 function task(order, delay) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -21,4 +32,5 @@ function task(order, delay) {
         }, delay);
     });
 }
-parallelCall();
+// parallelCall();
+parallelCall2();
